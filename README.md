@@ -58,6 +58,6 @@ In this step, you want to download PHP manager for IIS, and Rewrite Module, thes
 <img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP)
+This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
 </p>
 <br />
