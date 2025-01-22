@@ -18,34 +18,46 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Install / Enable IIS in Windows with CGI
+- Install PHP Manager for IIS
+- Install the Rewrite Module
+- Create PHP folder in C drive
+- Unzip the PHP Installer Package into the PHP folder
+- Install Visual C++ Redistributable or VC_Redist
+- Install and Configure MySQL
+- From within IIS as an admin, register PHP
+- Unzip osTicket Installation Files, then copy the "upload" file into c:\inetpub\wwwroot and rename to "osTicket"
+- Enable extentions so osTicket displays properly
+- Rename Sampleconfig to "ost-config"
+- Assign permissions to ost-config
+- Name your helpdesk / input your info
+- Install HeidiSQL
+- Create a new session, root/root
+- Create a database in the session called "osTicket"
+- Input database info into osTicket and install!
 
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mNqDVnC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Within Control Panel, you want to press "uninstall or change a program". From there on the left you want to click "Turn windows features on or off". After, you want to check the box for "World Wide Web Services-> Application Development Features -> and CGI" this gives osTicket a web server to run on and CGI lets IIS understand and execute PHP code (what osTicket uses).
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/9maKGGX.jpeg" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this step, you want to download PHP manager for IIS, and Rewrite Module, these help IIS manage and read the PHP code that osTicket uses.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP)
 </p>
 <br />
