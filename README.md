@@ -42,7 +42,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/mNqDVnC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Within Control Panel, you want to press "uninstall or change a program". From there on the left you want to click "Turn windows features on or off". After, you want to check the box for "World Wide Web Services-> Application Development Features -> and CGI" this gives osTicket a web server to run on and CGI lets IIS understand and execute PHP code (what osTicket uses).
+In order to download osTicket theres a lot of prerequesites. To start, I went to Control Panel, and to pressed "uninstall or change a program". From there on the left I clicked "Turn windows features on or off". After, I checked the boxes for "World Wide Web Services-> Application Development Features -> and CGI" this gives osTicket a web server to run on and CGI lets IIS (Internet Information Services) understand and execute PHP code (what osTicket uses).
 </p>
 <br />
 
@@ -50,7 +50,7 @@ Within Control Panel, you want to press "uninstall or change a program". From th
 <img src="https://i.imgur.com/9maKGGX.jpeg" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In this step, you want to download PHP manager for IIS, and Rewrite Module, these help IIS manage and read the PHP code that osTicket uses.
+In this step, I downloaded PHP manager for IIS, and Rewrite Module, these help IIS manage and read the PHP code that osTicket uses.
 </p>
 <br />
 
@@ -58,7 +58,7 @@ In this step, you want to download PHP manager for IIS, and Rewrite Module, thes
 <img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
+This next step is really simple, all I did was create a PHP folder inside my C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
 </p>
 <br />
 
@@ -95,25 +95,64 @@ The next essential step, is to register PHP from within IIS. So I ran IIS as an 
 <br />
 
 <p>
-<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4dVzbVO.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
+Now, I needed to get the core osTicket files into C:\inetpub\wwwroot.. "wwwroot" is the default location on the IIS web server where websites are hosted. This is where IIS serves up the web pages when someone visits the site. To do this I unzipped the osTicket file, then found the "upload" folder, where the core osTicket files live - the application’s scripts, templates, database connection files, etc. From here I copied it into the C:\inetpub\wwwroot\, and renamed it to "osTicket" which just makes it easier to access via the browser. e.g. instead of "http://yourwebsite.com/upload", I can go to "http://yourwebsite.com". To make a long explanation short, this step essentially moves the osTicket application into the location where IIS can recognize and serve it as a live web application.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/83QVb7u.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
+Next, I went into IIS-> sites -> default website -> osTicket, and clicked the "browse.80 (http)" on the right. It then opened osTicket installer (if you do everything correctly it should). When I opened it, I saw some green check marks and some red X's... this means I need to enable some extensions to make it compatable.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/8o17kyI.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
+In order to enable these extensions, I went back into IIS -> sites -> osTicket, then clicked PHP manager. At the bottom it says enable extentions, from there I went to enable these three extentions; php_opcache.dll, php_intl.dll, and php_imap.dll.. now ill explain what each of these do.. For "opcache", Instead of repeatedly running the same PHP scripts every time a page loads, opcache stores the compiled version of the code in memory, making things faster.. For "imap", it allows PHP to communicate with email servers using the IMAP protocol, and for osTicket this is useful for retrieving ticket updates via email.. Finally for "intl" (internationalization), it helps PHP handle things like dates, currencies, and other language-related features, and helps osTicket allow the app to display things properly in different languages or date/time formatting.
 </p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/fumYnUk.jpeg" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, we need to turn the sample configuration file into the real thing, and change its permissions.. To do this, I went into C:\inetpub\wwwroot\osTicket\include\, at the bottom there is a file called "ost-sampleconfig.php". I simply changed the name to "ost-config.php". Next, I right clicked it, went to properties->security->advanced. From there I removed all inherited permissions. Then I gave everyone full control. I did this so any user accessing the osTicket files, has permission to read, write, and modify those files as needed. (for the lab purposes of course).
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/BbA72uO.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now, all I did was go back into the osTicket webpage and put in my helpdesk info; such as the helpdesks name, email, and the admin user's information as well.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/HVXjkFy.jpeg" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, I downloaded HeidiSQL. HeidiSQL allows me to connect to my MySQL server (the one I set up earlier) and create the actual database where osTicket will store all its data. Then from within HeidiSQL, I created a new session called "root", and inside that session I created a database called "osTicket".
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/SiHZWTh.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Now all that was left to do was, go back into osTicket, and fill in the database information with the one I just created in HeidiSQL, and press install!!!
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/79ldsuP.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+BOOM!! After pressing install, osTicket was installed and I had access to the ticket creater AND the staff control panel. :)
 <br />
