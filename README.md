@@ -63,7 +63,7 @@ This next step is really simple, you just want to create a PHP folder inside you
 <br />
 
 <p>
-<img src="https://i.imgur.com/nFHK8tr.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ljeCzln.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 In this step, I unzipped the PHP Installer package into the PHP folder I just created in my C drive. 
@@ -79,17 +79,41 @@ I then downloaded VC_redist (Visual C++ redistributable), this is important beca
 <br />
 
 <p>
-<img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/uq29gES.jpeg" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
+Next, I downloaded MySQL, and changed the configuration to standard. After, I made the username and password "root, root". MySQL is a database management system that stores and organizes data for websites/apps (like osTicket). This is needed because MySQL is where all the data (like tickets, users, messages, etc.) gets stored in a structured way. The reasoning for changing the configuration is to ensure your MySQL setup is stable and ready for smaller setups like osTicket. As for the username and password being "root"... the user "root" is basically the default admin user for MySQL, similar to an admin account.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
+The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/M8rtoc0.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+The next essential step, is to register PHP from within IIS. So I ran IIS as an admin and registered it. This essentially tells IIS that PHP is installed, manages it, and makes sure IIS knows how to execute PHP files.
 </p>
 <br />
