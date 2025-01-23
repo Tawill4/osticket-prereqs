@@ -61,3 +61,35 @@ In this step, you want to download PHP manager for IIS, and Rewrite Module, thes
 This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/nFHK8tr.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+In this step, I unzipped the PHP Installer package into the PHP folder I just created in my C drive. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/kNPSNmr.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+I then downloaded VC_redist (Visual C++ redistributable), this is important because PHP needs VC_Redist libraries to run properly on windows. VC_Redist downloads these libraries onto your computer so PHP has access to these tools to do things like read files, interact with IIS, and even something as simple as running the code smoothly.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Cm4X69o.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+This next step is really simple, you just want to create a PHP folder inside your C drive (C:\PHP). This is for storage purposes and for osTicket to know where its data is being stored.
+</p>
+<br />
