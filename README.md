@@ -39,7 +39,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/mNqDVnC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/mNqDVnC.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 In order to download osTicket theres a lot of prerequesites. To start, I went to Control Panel, and to pressed "uninstall or change a program". From there on the left I clicked "Turn windows features on or off". After, I checked the boxes for "World Wide Web Services-> Application Development Features -> and CGI" this gives osTicket a web server to run on and CGI lets IIS (Internet Information Services) understand and execute PHP code (what osTicket uses).
