@@ -154,5 +154,5 @@ Now all that was left to do was, go back into osTicket, and fill in the database
 <img src="https://i.imgur.com/79ldsuP.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-BOOM!! After pressing install, osTicket was installed and I had access to the ticket creater AND the staff control panel. :)
+BOOM!! After pressing install, osTicket was installed and I had access to the ticket creator AND the staff control panel. :)
 <br />
